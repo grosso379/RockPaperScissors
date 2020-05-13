@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.header-container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.938);
+  color: white;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.733);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3%;
+  line-height: 2em;
+
+  .welcome {
+    font-size: 2em;
+    font-weight: 600;
+    padding: 0.4em 0;
+  }
+
+  p {
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+}
+
+main {
+  .info-container {
+    padding-top: 5vh;
+
+    .rounds {
+      margin-bottom: 5vh;
+      width: 100%;
+      text-align: center;
+
+      p {
+        font-size: 2em;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .your-wins,
+      .ties,
+      .machine-wins {
+        text-align: center;
+
+        p {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3em 0;
+
+    img {
+      height: 5.5em;
+      width: auto;
+    }
+
+    #player-choice,
+    #machine-choice {
+      position: absolute;
+      height: 5.5em;
+      width: 5.5em;
+      background-size: cover;
+      border-radius: 50%;
+      bottom: 120px;
+      opacity: 0;
+      transition: 1s;
+    }
+
+    #player-choice {
+      left: -20vw;
+    }
+
+    #player-choice::before {
+      content: "You";
+      font-size: 1.4em;
+      font-weight: 500;
+      position: relative;
+      top: -1.1em;
+      left: 1em;
+      text-align: center;
+    }
+
+    #machine-choice {
+      right: -20vw;
+    }
+
+    #machine-choice::before {
+      content: "Machine";
+      font-size: 1.4em;
+      font-weight: 500;
+      position: relative;
+      top: -1.1em;
+    }
+  }
+}
+.footer {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-size: 1.5em;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
