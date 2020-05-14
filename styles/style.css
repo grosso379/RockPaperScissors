@@ -97,24 +97,29 @@ main .img-container img {
   width: auto;
 }
 
-main .img-container #player-choice,
-main .img-container #machine-choice {
+main .display-container {
+  position: relative;
+  height: 6em;
+  overflow: hidden;
+  left: 0px;
+  right: 0px;
+}
+
+main .display-container #player-choice,
+main .display-container #machine-choice {
   position: absolute;
   height: 5.5em;
   width: 5.5em;
   background-size: cover;
   border-radius: 50%;
-  bottom: 120px;
   opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
-main .img-container #player-choice {
+main .display-container #player-choice {
   left: -20vw;
 }
 
-main .img-container #player-choice::before {
+main .display-container #player-choice::before {
   content: "You";
   font-size: 1.4em;
   font-weight: 500;
@@ -124,11 +129,11 @@ main .img-container #player-choice::before {
   text-align: center;
 }
 
-main .img-container #machine-choice {
+main .display-container #machine-choice {
   right: -20vw;
 }
 
-main .img-container #machine-choice::before {
+main .display-container #machine-choice::before {
   content: "Machine";
   font-size: 1.4em;
   font-weight: 500;
@@ -136,7 +141,7 @@ main .img-container #machine-choice::before {
   top: -1.1em;
 }
 
-.footer {
+footer {
   background-color: black;
   position: fixed;
   bottom: 0;

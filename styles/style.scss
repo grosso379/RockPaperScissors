@@ -36,6 +36,8 @@
   }
 }
 
+// ================================================ main styling ============================================
+
 main {
   .info-container {
     padding-top: 5vh;
@@ -77,6 +79,14 @@ main {
       height: 5.5em;
       width: auto;
     }
+  }
+
+  .display-container {
+    position: relative;
+    height: 6em;
+    overflow: hidden;
+    left: 0px;
+    right: 0px;
 
     #player-choice,
     #machine-choice {
@@ -85,9 +95,8 @@ main {
       width: 5.5em;
       background-size: cover;
       border-radius: 50%;
-      bottom: 120px;
       opacity: 0;
-      transition: 1s;
+      // transition: 1s;
     }
 
     #player-choice {
@@ -117,7 +126,10 @@ main {
     }
   }
 }
-.footer {
+
+// ============================================== Footer styling ===========================================
+
+footer {
   background-color: black;
   position: fixed;
   bottom: 0;

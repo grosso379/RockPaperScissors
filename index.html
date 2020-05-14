@@ -19,6 +19,7 @@
         <h1>Rock - Paper - Scissors</h1>
       </div>
     </header>
+
     <main>
       <div class="info-container">
         <div class="rounds">
@@ -40,7 +41,6 @@
         </ul>
       </div>
       <div class="img-container">
-        <div id="player-choice"></div>
         <img
           src="img/rock.png"
           alt="Rock icon"
@@ -59,12 +59,17 @@
           id="scissor"
           onclick="play(this)"
         />
+      </div>
+      <div class="display-container">
+        <div id="player-choice"></div>
         <div id="machine-choice"></div>
       </div>
     </main>
-    <div class="footer">
+
+    <footer>
       <small>&copy; Copyright 2018, Juan Cruz Grosso</small>
-    </div>
+    </footer>
+
     <script src="./js/main.js"></script>
   </body>
 </html>

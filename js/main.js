@@ -4,16 +4,34 @@ const randomChoice = function () {
   return keys[machineChoice];
 };
 
-const showRound = function () {
-  if (document.getElementById("round-count").innerText == 0) {
-    let playerDisplay = document.getElementById("player-choice");
-    let machineDisplay = document.getElementById("machine-choice");
+const animateChoice = function () {
+  let playerDisplay = document.getElementById("player-choice");
+  let machineDisplay = document.getElementById("machine-choice");
 
-    playerDisplay.style.opacity = 1;
-    playerDisplay.style.left = "20vw";
+  if (document.getElementById("round-count").innerText != "0") {
+    playerDisplay.style.opacity = 0;
+    playerDisplay.style.left = "-20vw";
 
-    machineDisplay.style.opacity = 1;
-    machineDisplay.style.right = "20vw";
+    machineDisplay.style.opacity = 0;
+    machineDisplay.style.right = "-20vw";
+  }
+
+  let interval = setInterval(frame, 5);
+  let pos = playerDisplay.offsetLeft * (100 / screen.width);
+  let opac = Number(playerDisplay.style.opacity);
+  function frame() {
+    if (pos >= 20 && opac > 0.9) {
+      clearInterval;
+    } else {
+      pos++;
+      opac += 0.05;
+
+      playerDisplay.style.opacity = opac;
+      playerDisplay.style.left = pos + "vw";
+
+      machineDisplay.style.opacity = opac;
+      machineDisplay.style.right = pos + "vw";
+    }
   }
 };
 
@@ -59,7 +77,7 @@ const play = function (element) {
     options[machineChoice];
 
   // Display round
-  showRound();
+  animateChoice();
 
   // Change counters
   computeRound(playerChoice, machineChoice);
