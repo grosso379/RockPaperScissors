@@ -6,7 +6,21 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-.header-container {
+html,
+body {
+  height: 100%;
+}
+
+#page-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+#content-wrap {
+  padding-bottom: 5em;
+}
+
+#header-container {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.938);
   color: white;
@@ -15,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3%;
+  padding: 0.7em;
   line-height: 2em;
 
   .welcome {
@@ -39,11 +53,11 @@
 // ================================================ main styling ============================================
 
 main {
-  .info-container {
-    padding-top: 5vh;
+  #info-container {
+    padding-top: 4vh;
 
     .rounds {
-      margin-bottom: 5vh;
+      margin-bottom: 4vh;
       width: 100%;
       text-align: center;
 
@@ -69,11 +83,11 @@ main {
     }
   }
 
-  .img-container {
+  #img-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 3em 0;
+    padding: 1em 0 3em;
 
     img {
       height: 5.5em;
@@ -81,10 +95,11 @@ main {
     }
   }
 
-  .display-container {
+  #display-container {
     position: relative;
-    height: 6em;
+    height: 10em;
     overflow: hidden;
+    padding: 2em 0;
     left: 0px;
     right: 0px;
 
@@ -130,14 +145,17 @@ main {
 // ============================================== Footer styling ===========================================
 
 footer {
-  background-color: black;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  color: white;
-  font-size: 1.5em;
-  height: 10vh;
+  height: 3em;
   display: flex;
   align-items: center;
-  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+  width: 100%;
+  padding: 15px;
 }
+
+// ========================================== Bigger devices media query ==================================

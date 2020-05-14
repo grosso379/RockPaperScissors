@@ -1,10 +1,17 @@
 const randomChoice = function () {
+  /** makes a rock-paper-scissors random move
+   * @return {string} the random choice made, it can be 'rock' 'paper' or 'scissors'
+   */
+
   let keys = ["rock", "paper", "scissor"];
   let machineChoice = Math.floor(keys.length * Math.random());
   return keys[machineChoice];
 };
 
 const animateChoice = function () {
+  /*
+    Handles the animation of player choice and machine choice appearing in the screen
+  */
   let playerDisplay = document.getElementById("player-choice");
   let machineDisplay = document.getElementById("machine-choice");
 
@@ -36,6 +43,12 @@ const animateChoice = function () {
 };
 
 const computeRound = function (playerChoice, machineChoice) {
+  /**
+   * Compute round and actualizes round counter and game stat counters(win, tie, lose)
+   * @param {string} playerChoice The game choice made by the player
+   * @param {string} machineChoice The game choice randomly generated
+   */
+
   // Add one to the round count
   let roundCount = document.getElementById("round-count");
   roundCount.innerText = Number(roundCount.innerText) + 1;
@@ -60,6 +73,9 @@ const computeRound = function (playerChoice, machineChoice) {
 };
 
 const play = function (element) {
+  /*
+   *Handles all the game functionality
+   */
   let options = {
     rock: "url('../img/rock.png')",
     paper: "url('../img/paper.png')",

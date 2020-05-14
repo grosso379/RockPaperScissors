@@ -12,63 +12,69 @@
     <title>Rock-Papers-Scissors</title>
   </head>
   <body>
-    <header>
-      <div class="header-container">
-        <p class="welcome">Welcome!<br /></p>
-        <p>this is the best place for playing<br /></p>
-        <h1>Rock - Paper - Scissors</h1>
-      </div>
-    </header>
+    <div id="page-container">
+      <div id="content-wrap">
+        <header>
+          <div id="header-container">
+            <p class="welcome">Welcome!<br /></p>
+            <p>this is the best place for playing<br /></p>
+            <h1>Rock - Paper - Scissors</h1>
+          </div>
+        </header>
 
-    <main>
-      <div class="info-container">
-        <div class="rounds">
-          <p>Round <span id="round-count">0</span></p>
+        <main>
+          <div id="info-container">
+            <div class="rounds">
+              <p>Round <span id="round-count">0</span></p>
+            </div>
+            <ul>
+              <li class="your-wins">
+                <p>Your Wins</p>
+                <p id="win-count">0</p>
+              </li>
+              <li class="ties">
+                <p>Ties</p>
+                <p id="tie-count">0</p>
+              </li>
+              <li class="machine-wins">
+                <p>Machine Wins</p>
+                <p id="lose-count">0</p>
+              </li>
+            </ul>
+          </div>
+          <div id="img-container">
+            <img
+              src="img/rock.png"
+              alt="Rock icon"
+              id="rock"
+              onclick="play(this)"
+            />
+            <img
+              src="img/paper.png"
+              alt="Paper icon"
+              id="paper"
+              onclick="play(this)"
+            />
+            <img
+              src="img/scissors.png"
+              alt="Scissor icon"
+              id="scissor"
+              onclick="play(this)"
+            />
+          </div>
+          <div id="display-container">
+            <div id="player-choice"></div>
+            <div id="machine-choice"></div>
+          </div>
+        </main>
+      </div>
+
+      <footer>
+        <div id="footer">
+          <small>&copy; Copyright 2018, Juan Cruz Grosso</small>
         </div>
-        <ul>
-          <li class="your-wins">
-            <p>Your Wins</p>
-            <p id="win-count">0</p>
-          </li>
-          <li class="ties">
-            <p>Ties</p>
-            <p id="tie-count">0</p>
-          </li>
-          <li class="machine-wins">
-            <p>Machine Wins</p>
-            <p id="lose-count">0</p>
-          </li>
-        </ul>
-      </div>
-      <div class="img-container">
-        <img
-          src="img/rock.png"
-          alt="Rock icon"
-          id="rock"
-          onclick="play(this)"
-        />
-        <img
-          src="img/paper.png"
-          alt="Paper icon"
-          id="paper"
-          onclick="play(this)"
-        />
-        <img
-          src="img/scissors.png"
-          alt="Scissor icon"
-          id="scissor"
-          onclick="play(this)"
-        />
-      </div>
-      <div class="display-container">
-        <div id="player-choice"></div>
-        <div id="machine-choice"></div>
-      </div>
-    </main>
-
-    <footer>
-      <small>&copy; Copyright 2018, Juan Cruz Grosso</small>
-    </footer>
+      </footer>
+    </div>
 
     <script src="./js/main.js"></script>
   </body>

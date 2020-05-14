@@ -7,7 +7,21 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-.header-container {
+html,
+body {
+  height: 100%;
+}
+
+#page-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+#content-wrap {
+  padding-bottom: 5em;
+}
+
+#header-container {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.938);
   color: white;
@@ -23,42 +37,42 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 3%;
+  padding: 0.7em;
   line-height: 2em;
 }
 
-.header-container .welcome {
+#header-container .welcome {
   font-size: 2em;
   font-weight: 600;
   padding: 0.4em 0;
 }
 
-.header-container p {
+#header-container p {
   font-size: 1.4em;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-.header-container h1 {
+#header-container h1 {
   font-size: 1.4em;
   font-weight: 600;
 }
 
-main .info-container {
-  padding-top: 5vh;
+main #info-container {
+  padding-top: 4vh;
 }
 
-main .info-container .rounds {
-  margin-bottom: 5vh;
+main #info-container .rounds {
+  margin-bottom: 4vh;
   width: 100%;
   text-align: center;
 }
 
-main .info-container .rounds p {
+main #info-container .rounds p {
   font-size: 2em;
 }
 
-main .info-container ul {
+main #info-container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,19 +82,19 @@ main .info-container ul {
       flex-wrap: wrap;
 }
 
-main .info-container ul .your-wins,
-main .info-container ul .ties,
-main .info-container ul .machine-wins {
+main #info-container ul .your-wins,
+main #info-container ul .ties,
+main #info-container ul .machine-wins {
   text-align: center;
 }
 
-main .info-container ul .your-wins p,
-main .info-container ul .ties p,
-main .info-container ul .machine-wins p {
+main #info-container ul .your-wins p,
+main #info-container ul .ties p,
+main #info-container ul .machine-wins p {
   font-size: 1.3em;
 }
 
-main .img-container {
+main #img-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,24 +103,25 @@ main .img-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3em 0;
+  padding: 1em 0 3em;
 }
 
-main .img-container img {
+main #img-container img {
   height: 5.5em;
   width: auto;
 }
 
-main .display-container {
+main #display-container {
   position: relative;
-  height: 6em;
+  height: 10em;
   overflow: hidden;
+  padding: 2em 0;
   left: 0px;
   right: 0px;
 }
 
-main .display-container #player-choice,
-main .display-container #machine-choice {
+main #display-container #player-choice,
+main #display-container #machine-choice {
   position: absolute;
   height: 5.5em;
   width: 5.5em;
@@ -115,11 +130,11 @@ main .display-container #machine-choice {
   opacity: 0;
 }
 
-main .display-container #player-choice {
+main #display-container #player-choice {
   left: -20vw;
 }
 
-main .display-container #player-choice::before {
+main #display-container #player-choice::before {
   content: "You";
   font-size: 1.4em;
   font-weight: 500;
@@ -129,11 +144,11 @@ main .display-container #player-choice::before {
   text-align: center;
 }
 
-main .display-container #machine-choice {
+main #display-container #machine-choice {
   right: -20vw;
 }
 
-main .display-container #machine-choice::before {
+main #display-container #machine-choice::before {
   content: "Machine";
   font-size: 1.4em;
   font-weight: 500;
@@ -142,19 +157,20 @@ main .display-container #machine-choice::before {
 }
 
 footer {
-  background-color: black;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  color: white;
-  font-size: 1.5em;
-  height: 10vh;
+  height: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+  width: 100%;
+  padding: 15px;
 }
 /*# sourceMappingURL=style.css.map */
